@@ -1,7 +1,8 @@
 /* Start Global Variables */
 :root {
-  --main-color: aqua;
-  --transpaernt-color: rgb(15 116 143 / 70%);
+  --main-color: #19c8fa;
+  --transparent-color: rgb(15 116 143 / 70%);
+  --section-padding: 100px;
 }
 /* End Global Variables */
 
@@ -170,7 +171,7 @@ header nav .form i {
   transform: translatey(-50%);
   padding: 50px;
   width: 50%;
-  background-color: var(--transpaernt-color);
+  background-color: var(--transparent-color);
   color: white;
   display: flex;
   justify-content: flex-end;
@@ -250,9 +251,154 @@ header nav .form i {
 /*
  End of the Landing section  
 */
+/*
+
+start service section  
+
+*/
+.section-srv {
+  padding: var(--section-padding) 0;
+}
+.section-srv .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 20px;
+}
+.section-srv .container .srv-col {
+  display: flex;
+  padding: 0 30px;
+  flex-direction: column;
+  gap: 40px;
+}
+.srv-col .col {
+  display: flex;
+  gap: 40px;
+}
+@media (max-width: 767px) {
+  .section {
+    padding: var(--section-padding) 0px;
+  }
+  .section .container {
+    display: grid;
+    padding: 0;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .srv-col .col {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .section .container .srv-col {
+    display: flex;
+    padding: 0 0px;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+.srv-col .col .text {
+  padding: 0 0 20px 20px 20px;
+}
+
+.srv-col .col h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  color: var(--main-color);
+}
+.srv-col .col p {
+  line-height: 2;
+  font-size: 16px;
+  font-weight: lighter;
+}
+/*
+
+
+end of service section  
+
+
+*/
+/* start sub section  */
+.design {
+  padding: var(--section-padding) 0;
+  height: 600px;
+  background-image: url("../images/design-features.jpg");
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.design .image {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  flex: 1;
+}
+.design .image img {
+  position: relative;
+  bottom: -150px;
+}
+.design .text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  top: 50%;
+  right: 0;
+  transform: translatey(-50%);
+  padding: 50px;
+  width: 50%;
+  background-color: var(--transparent-color);
+  color: white;
+}
+
+.design .text h2 {
+  font-weight: 500;
+  font-size: 32px;
+  padding-bottom: 40px;
+}
+
+.design .text ul li {
+  font-size: 18px;
+  font-weight: lighter;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.design .text ul li::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f108";
+  font-weight: 900;
+  margin-right: 20px;
+  position: relative;
+  top: 1px;
+}
+@media (max-width: 768px) {
+  .design .image img {
+    display: none;
+  }
+  .design .text {
+    flex: auto;
+    width: 100%;
+  }
+}
+
+/* end sub section  */
 
 /*
+
+
+
+
  Start Componants
+
+
+
+
+
+
+
  */
 .main-heading {
   text-align: center;
