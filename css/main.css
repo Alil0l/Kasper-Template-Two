@@ -394,7 +394,89 @@ end of service section
 }
 
 /* end sub section  */
-
+/* <!-- start Portfolio section --> */
+.portfolio {
+  padding: var(--section-padding) 0;
+  text-align: center;
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio .shuffle li {
+  font-size: 20px;
+  padding: 10px;
+}
+.shuffle .active {
+  background-color: var(--main-color);
+  color: white;
+}
+.imgs-container {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imgs-container .box {
+  flex-basis: 25%;
+  position: relative;
+  overflow: hidden;
+}
+.imgs-container .box .caption {
+  text-align: start;
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  padding: 20px;
+  background-color: white;
+  width: 100%;
+  bottom: -100px;
+}
+.caption h4 {
+  font-size: 24px;
+  padding-bottom: 12px;
+}
+.caption p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #19c8fa;
+}
+@media (max-width: 1200px) {
+  .imgs-container .box {
+    flex-basis: 50%;
+  }
+}
+@media (max-width: 767px) {
+  .imgs-container .box {
+    flex-basis: 100%;
+  }
+}
+.imgs-container .box img {
+  max-width: 100%;
+  transition: 0.3s;
+}
+.imgs-container .box:hover .caption {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  bottom: 0px;
+}
+.imgs-container .box img:hover {
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
+  transform: rotate(3deg) scale(1.1);
+}
+.portfolio .btn {
+  background-color: var(--main-color);
+  color: white;
+  padding: 15px 20px;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+/* <!-- end Portfolio section --> */
 /*
 
 
