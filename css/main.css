@@ -732,6 +732,174 @@ end sub section
 
 /* End skills section */
 
+/* start quote section */
+.quote {
+  padding: var(--section-padding) 0;
+  text-align: center;
+  position: relative;
+  background-image: url("../images/quote.jpg");
+  background-size: cover;
+  color: white;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 70%);
+}
+.quote .container {
+  position: relative;
+}
+.quote .container q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+.quote .container q::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f10d";
+  font-size: 20px;
+  font-weight: 900;
+  margin-right: 10px;
+  position: relative;
+  top: -15px;
+}
+
+.quote .container q::after {
+  font-family: "Font Awesome 5 Free";
+  content: "\f10e";
+  font-size: 20px;
+  font-weight: 900;
+  margin-left: 10px;
+  position: relative;
+  top: -15px;
+}
+/* end quote section */
+
+/* start pricing section */
+.pricing {
+  padding: var(--section-padding) 0;
+}
+.pricing .container {
+  text-align: center;
+}
+.pricing .container .pricing-box {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+}
+.pricing .pricing-box {
+  margin: 0;
+}
+.pricing-box .box {
+  flex-basis: 25%;
+  margin-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .pricing-box .box {
+    flex-basis: 100%;
+    margin: 0 40px;
+  }
+}
+@media (min-width: 768px) {
+  .pricing-box .box {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pricing-box .box {
+    flex-basis: 25%;
+  }
+}
+
+.pricing-box .box .top {
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: var(--main-color);
+  padding: 20px;
+}
+.pricing-box .box .top h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+.pricing-box .box .top span {
+  font-weight: 600;
+  font-size: 80px;
+  position: relative;
+  margin: 20px;
+}
+.pricing-box .box .top span::before {
+  content: "$";
+  font-size: 25px;
+  position: relative;
+  top: -40px;
+  margin-right: 15px;
+  font-weight: normal;
+}
+.pricing-box .box .top span::after {
+  content: "/Mo";
+  font-size: 20px;
+  position: relative;
+  right: -15px;
+}
+
+.pricing-box .box .mid {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-box .box .mid p {
+  font-size: 20px;
+  line-height: 2;
+  font-weight: 200;
+}
+.pricing-box .box .mid p:not(:last-child) {
+  width: 60%;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--main-color);
+}
+.pricing-box .box .mid p:last-child {
+  width: 50%;
+  padding: 20px 0;
+}
+.pricing-box .box .bot {
+  padding: 20px;
+  border: 1px solid var(--main-color);
+  width: 40%;
+  margin: 40px auto;
+}
+.pricing-box .box .bot a {
+  font-size: 16px;
+  font-weight: 200;
+  text-decoration: none;
+}
+.pricing .container p {
+  font-size: 24px;
+  font-weight: 400;
+}
+.pricing .container .contact {
+  display: block;
+  width: fit-content;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  background-color: var(--main-color);
+  padding: 20px 40px;
+  color: white;
+  margin: 40px auto;
+}
+
+/* end pricing section */
 /*
 
 
